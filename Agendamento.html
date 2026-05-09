@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agendamento | Raw Cuts</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 500px;
+      background: #1a1a1a;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 2rem;
+    }
+
+    p {
+      text-align: center;
+      color: #bdbdbd;
+      margin-bottom: 30px;
+    }
+
+    .logo {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-size: 0.95rem;
+      margin-bottom: 5px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 12px;
+      background: #2a2a2a;
+      color: white;
+      font-size: 1rem;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: 2px solid #c49b63;
+    }
+
+    textarea {
+      resize: none;
+      height: 90px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 15px;
+      border: none;
+      border-radius: 14px;
+      background: #c49b63;
+      color: black;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.02);
+      background: #ddb27a;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      color: #8d8d8d;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="logo">✂️</div>
+
+    <h1>Agendamento</h1>
+    <p>Reserve seu horário na Raw Cuts</p>
+
+    <form id="agendamentoForm">
+
+      <div>
+        <label>Nome</label>
+        <input type="text" id="nome" required />
+      </div>
+
+      <div>
+        <label>Telefone</label>
+        <input type="tel" id="telefone" required />
+      </div>
+
+      <div>
+        <label>Serviço</label>
+        <select id="servico" required>
+          <option value="">Selecione</option>
+          <option>Corte</option>
+          <option>Barba</option>
+          <option>Corte + Barba</option>
+          <option>Sobrancelha</option>
+          <option>Pigmentação</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Barbeiro</label>
+        <select id="barbeiro" required>
+          <option value="">Selecione</option>
+          <option>João</option>
+          <option>Carlos</option>
+          <option>Lucas</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Data</label>
+        <input type="date" id="data" required />
+      </div>
+
+      <div>
+        <label>Horário</label>
+        <input type="time" id="horario" required />
+      </div>
+
+      <div>
+        <label>Observações</label>
+        <textarea id="obs" placeholder="Algo específico?"></textarea>
+      </div>
+
+      <button type="submit">
+        Agendar pelo WhatsApp
+      </button>
+
+    </form>
+
+    <div class="footer">
+      Raw Cuts © 2026
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('agendamentoForm');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const nome = document.getElementById('nome').value;
+      const telefone = document.getElementById('telefone').value;
+      const servico = document.getElementById('servico').value;
+      const barbeiro = document.getElementById('barbeiro').value;
+      const data = document.getElementById('data').value;
+      const horario = document.getElementById('horario').value;
+      const obs = document.getElementById('obs').value;
+
+      const mensagem = `Olá, gostaria de agendar um horário!%0A%0A` +
+        `👤 Nome: ${nome}%0A` +
+        `📞 Telefone: ${telefone}%0A` +
+        `✂️ Serviço: ${servico}%0A` +
+        `💈 Barbeiro: ${barbeiro}%0A` +
+        `📅 Data: ${data}%0A` +
+        `⏰ Horário: ${horario}%0A` +
+        `📝 Observações: ${obs}`;
+
+      const numero = '5583999999999';
+
+      window.open(`https://wa.me/${numero}?text=${mensagem}`, '_blank');
+    });
+  </script>
+
+</body>
+  </html>
