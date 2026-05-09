@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Space+Grotesk:wght@500;700&amp;family=Montserrat:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#79ff5b",
+                        "on-secondary-fixed-variant": "#095300",
+                        "background": "#131313",
+                        "on-error": "#690005",
+                        "on-surface-variant": "#bac9cc",
+                        "on-primary-fixed-variant": "#004f58",
+                        "on-tertiary": "#5e1700",
+                        "surface-tint": "#00daf3",
+                        "on-secondary-fixed": "#022100",
+                        "on-tertiary-fixed-variant": "#852400",
+                        "on-primary-container": "#00626e",
+                        "on-tertiary-fixed": "#3a0b00",
+                        "surface-dim": "#131313",
+                        "tertiary-fixed": "#ffdbd0",
+                        "primary-fixed-dim": "#00daf3",
+                        "inverse-on-surface": "#313030",
+                        "secondary-container": "#2ff801",
+                        "error": "#ffb4ab",
+                        "tertiary-container": "#ffc3b1",
+                        "surface-container": "#201f1f",
+                        "surface": "#131313",
+                        "secondary-fixed-dim": "#2ae500",
+                        "on-secondary-container": "#0f6d00",
+                        "outline": "#849396",
+                        "secondary": "#d7ffc5",
+                        "on-primary": "#00363d",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-bright": "#393939",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary": "#053900",
+                        "tertiary-fixed-dim": "#ffb59e",
+                        "inverse-primary": "#006875",
+                        "on-surface": "#e5e2e1",
+                        "inverse-surface": "#e5e2e1",
+                        "primary-fixed": "#9cf0ff",
+                        "primary": "#c3f5ff",
+                        "outline-variant": "#3b494c",
+                        "on-tertiary-container": "#a52f00",
+                        "on-primary-fixed": "#001f24",
+                        "primary-container": "#00e5ff",
+                        "on-background": "#e5e2e1",
+                        "tertiary": "#ffe8e2",
+                        "error-container": "#93000a",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-container-highest": "#353534",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-variant": "#353534"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "48px",
+                        "stack-lg": "32px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "stack-md": "16px",
+                        "unit": "4px",
+                        "stack-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Anton"],
+                        "label-md": ["Space Grotesk"],
+                        "headline-md": ["Anton"],
+                        "body-lg": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "label-xl": ["Space Grotesk"],
+                        "headline-xl": ["Anton"],
+                        "headline-lg": ["Anton"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["36px", {"lineHeight": "1.1", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-xl": ["14px", {"lineHeight": "1", "fontWeight": "700"}],
+                        "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.1", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.concrete-texture {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuB25kdYLDrds4KIhh6AuiD0yhOwawviCi3O5HKBuk0uwwPSjCLQqr1p8UN-8hNj-TUrkmqTr65TBxqJyCr3TtTdxFxpug2v8araTbq00m5I08QheROX9zYzlGN_HtbsPTiDKyGUqAhRv-IHUlcmSXG9pH442IlqYIbf_rrD0-Ct0ZOfOQjkkG1iNynC6tCZEv3Gtx7D-jdF-7KBsNa8DsnPhcWtBdTFb1cczrxjma9dGA0Zw2RlNnrq3JOxkh-pYyT-UKi7GkR0Q4Q);
+    background-blend-mode: overlay
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar -->
+<header class="bg-background dark:bg-background w-full top-0 sticky border-b-4 border-secondary-container drop-shadow-[4px_4px_0px_rgba(47,248,1,1)] z-50">
+<div class="flex justify-between items-center px-margin-mobile py-stack-md w-full">
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-secondary-fixed cursor-pointer active:translate-y-1 transition-transform">menu</span>
+<h1 class="font-headline-xl text-headline-xl text-secondary-fixed uppercase tracking-tighter">RAW CUTS</h1>
+</div>
+<div class="w-12 h-12 border-2 border-secondary-fixed overflow-hidden hover:skew-x-2 transition-transform active:translate-y-1">
+<img alt="Foto de perfil do barbeiro" class="w-full h-full object-cover" data-alt="A close-up portrait of a stylish urban professional with sharp grooming, set against a dark, moody background with subtle neon green lighting. The visual style is high-contrast and gritty, reflecting an elite street-culture aesthetic. The lighting is dramatic, highlighting the clean lines of the person's haircut and facial features in a masterfully executed digital photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADt9cavEowqlF7ARXa9jm1hZdfL98aRxDZAlNaLrLJr0Ag_w2MOQ3caUL3j5UJoPklmy8CjX4MZ3VfdGKUKpEi_UgtRLXvM_U1kIw22KwAGRcKyDaLer8IFYWbRcBBIHuHlw0NKT2U1t0_K0_DQ0KVrTTFFW1RBbAartRMEfKEZYfRF3igmpe7UHPhm-te82MOLEztBKMCpAKILVUG8_X_S_02GAnnE7pgfeOmWbPirSKqB3HqL5GAT7pOjzf5rAlYk2Dn351yssQ"/>
+</div>
+</div>
+</header>
+<main class="min-h-screen px-margin-mobile md:px-margin-desktop py-stack-lg concrete-texture">
+<!-- Hero Section -->
+<section class="mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase mb-stack-sm">NOSSA CREW</h2>
+<div class="h-1 w-24 bg-secondary-container mb-stack-md"></div>
+<p class="font-body-lg text-body-lg max-w-2xl text-on-surface-variant">Lâminas de elite, precisão das ruas. Conheça os artistas que redefinem o cenário urbano, um fade por vez.</p>
+</section>
+<!-- Barber Profiles Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Profile Card 1 -->
+<div class="group relative bg-surface-container border-2 border-primary-container p-stack-md hover:skew-x-1 transition-all duration-200 drop-shadow-[8px_8px_0px_rgba(0,229,255,1)] hover:drop-shadow-[12px_12px_0px_rgba(0,229,255,1)]">
+<div class="relative w-full aspect-square mb-stack-md border-b-4 border-secondary-fixed overflow-hidden">
+<img alt="Perfil do Mestre do Fade" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A gritty, cinematic portrait of a barber holding professional shears, standing in a dimly lit, industrial studio. The scene is electrified by vibrant neon green and cyan light streaks cutting through the shadows. The barber has a confident, intense expression, capturing the rebellious yet professional spirit of urban barbering. High-contrast textures and a brutalist composition emphasize the raw energy of the street art aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuhnfLPOGi_Z8w6q_X0KVFM8niWZ2Np4LhmxY43bfGYiptwFmSnEtAcSNylNFftNTPmllhM6j31q4KLiB3y97P7StS0B3SFyTTGwIrVO4I7YSLYMJn8vrYLCbJxlBh4WcjcCHnwO8wHoRpP_8eEZnoD-6Uo3NsjuA-5m9mKSmqGydr5eqltyYeRpWxfI6JmMpnZo9EbQYOGLxcxhxlPzHr4vfTk6IGRe3rjhYp6gwIPfAyPpj8tLMQkwJFufw6BGhMmS5QmAeSnlA"/>
+<div class="absolute top-4 right-4 -rotate-3 bg-secondary-container px-3 py-1 border-2 border-background">
+<span class="font-label-xl text-label-xl text-on-secondary-container uppercase">MESTRE DO FADE</span>
+</div>
+</div>
+<div class="flex flex-col gap-unit">
+<h3 class="font-headline-md text-headline-md text-secondary-fixed uppercase">JAXON_REED</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-sm">Especialista em skin fades e texturização. 10 anos de vivência na selva de pedra.</p>
+<div class="flex gap-stack-sm mb-stack-md">
+<span class="border border-primary-container px-2 py-1 font-label-md text-label-md text-primary-container uppercase">URBANO</span>
+<span class="border border-primary-container px-2 py-1 font-label-md text-label-md text-primary-container uppercase">PRECISÃO</span>
+</div>
+<button class="w-full bg-secondary-fixed text-on-secondary-fixed font-label-xl text-label-xl py-stack-md flex items-center justify-center gap-2 hover:bg-primary-container transition-colors active:translate-y-1">
+                        VER PORTFÓLIO
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Profile Card 2 -->
+<div class="group relative bg-surface-container border-2 border-primary-container p-stack-md hover:-skew-x-1 transition-all duration-200 drop-shadow-[8px_8px_0px_rgba(121,255,91,1)] hover:drop-shadow-[12px_12px_0px_rgba(121,255,91,1)]">
+<div class="relative w-full aspect-square mb-stack-md border-b-4 border-primary-container overflow-hidden">
+<img alt="Perfil do Artista Freestyle" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="An edgy, close-up photograph of a barber with tattooed hands meticulously detailing a hair design. The lighting is a sharp clash of deep charcoal and electric lime green neons, reflecting off polished steel tools. The setting is a brutalist interior with exposed concrete walls decorated with subtle graffiti tags. The mood is high-octane and focused, representing the master craft of freestyle hair artistry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1rHEtzOZMQhSGhLzchNdXd9wFugs8yPptLPcKMl3ui1xLwuzQZnjxBfgzZzgJ8CWGrXVNQUXn3EGKNMJZV4x12Sj3c2ZuZwaCRjP7bfrFad_P9sNKly5AgYgBZDVEuUuSqiRX3uOOduqLpqO5xU6UlzbqGwtsfYR8YVpeZ2WDUxzspPHQDQNqz305FecrGMGjAlW26IBAHOYHXBGYeZ7mdSPoJ5hZKiqafbLVSSdhdXCRQQC9mnTAlyFhJNG0vV7p_ObiTLqxfMo"/>
+<div class="absolute top-4 left-4 rotate-2 bg-primary-container px-3 py-1 border-2 border-background">
+<span class="font-label-xl text-label-xl text-on-primary-container uppercase">ARTISTA FREESTYLE</span>
+</div>
+</div>
+<div class="flex flex-col gap-unit">
+<h3 class="font-headline-md text-headline-md text-secondary-fixed uppercase">LENNY_STENCIL</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-sm">Transformando crânios em telas. Padrões customizados e geometria wildstyle para os brutos.</p>
+<div class="flex gap-stack-sm mb-stack-md">
+<span class="border border-primary-container px-2 py-1 font-label-md text-label-md text-primary-container uppercase">GRAFFITI</span>
+<span class="border border-primary-container px-2 py-1 font-label-md text-label-md text-primary-container uppercase">GEOMÉTRICO</span>
+</div>
+<button class="w-full bg-secondary-fixed text-on-secondary-fixed font-label-xl text-label-xl py-stack-md flex items-center justify-center gap-2 hover:bg-primary-container transition-colors active:translate-y-1">
+                        VER PORTFÓLIO
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Profile Card 3 -->
+<div class="group relative bg-surface-container border-2 border-primary-container p-stack-md hover:skew-y-1 transition-all duration-200 drop-shadow-[8px_8px_0px_rgba(255,181,158,1)] hover:drop-shadow-[12px_12px_0px_rgba(255,181,158,1)]">
+<div class="relative w-full aspect-square mb-stack-md border-b-4 border-tertiary-container overflow-hidden">
+<img alt="Perfil do Arquiteto de Barbas" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A portrait of a master barber specializing in beard grooming, set in an atmosphere of thick, moody shadows and brilliant orange neon glows. The background features blurred industrial elements and street art motifs. The barber has a rugged, professional look, wearing a leather apron. The visual style uses a palette of deep blacks, greys, and intense neon orange highlights to create a gritty yet premium urban vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfYeASxuD1_wfahegSSJx92wNX3_8uhktBFsj31mwQQg_Gr5P0t_NrTMaUELKWeIGm1A9iRnlD9c_-q7sjVUFAfpuA0MsD8k48op2DzT0Ox4xeYljftpvxDcN7Z0q7r2OdUgrRHwfBP-CqxycVIcEKp3estFdn-S-00BtbWBYx7joPDiTFvXHIZXGSUoq0I6HmHjS3YxuowSFA0jm7F2bnWkKe4pJO8jhxXN34LYrqB2-5DaVToUFgbPyab1rN2dR0SjlTFFRu6ho"/>
+<div class="absolute bottom-4 right-4 -rotate-2 bg-tertiary-container px-3 py-1 border-2 border-background">
+<span class="font-label-xl text-label-xl text-on-tertiary-container uppercase">ARQUITETO DE BARBAS</span>
+</div>
+</div>
+<div class="flex flex-col gap-unit">
+<h3 class="font-headline-md text-headline-md text-secondary-fixed uppercase">MARCUS_IRON</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-sm">Escultura de barba e navalha tradicional. Moldando a herança do rei moderno.</p>
+<div class="flex gap-stack-sm mb-stack-md">
+<span class="border border-primary-container px-2 py-1 font-label-md text-label-md text-primary-container uppercase">CLÁSSICO</span>
+<span class="border border-primary-container px-2 py-1 font-label-md text-label-md text-primary-container uppercase">SCULPT</span>
+</div>
+<button class="w-full bg-secondary-fixed text-on-secondary-fixed font-label-xl text-label-xl py-stack-md flex items-center justify-center gap-2 hover:bg-primary-container transition-colors active:translate-y-1">
+                        VER PORTFÓLIO
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- The Fade Progress Section -->
+<section class="mt-stack-lg p-stack-md bg-surface-container-high border-l-8 border-secondary-container">
+<h4 class="font-headline-md text-headline-md text-secondary-fixed uppercase mb-stack-sm">STATUS PRÓXIMO NÍVEL</h4>
+<div class="flex gap-2 h-8 w-full max-w-xl">
+<div class="flex-1 bg-secondary-container"></div>
+<div class="flex-1 bg-secondary-container"></div>
+<div class="flex-1 bg-secondary-container"></div>
+<div class="flex-1 bg-secondary-container/30 border-2 border-secondary-container"></div>
+<div class="flex-1 bg-secondary-container/10 border-2 border-secondary-container/20"></div>
+</div>
+<p class="mt-stack-sm font-label-xl text-label-xl text-on-surface">3/5 CORTES PARA LIBERAR <span class="text-secondary-fixed underline">ACESSO ELITE</span></p>
+</section>
+</main>
+<!-- Navigation Drawer (Hidden by default, shown for layout reference) -->
+<aside class="fixed top-0 left-0 h-full w-80 bg-surface-container dark:bg-surface-container border-r-4 border-secondary-fixed shadow-[8px_0px_0px_0px_rgba(121,255,91,1)] z-[60] transform -translate-x-full transition-transform duration-300">
+<div class="flex flex-col h-full py-stack-lg">
+<div class="px-margin-mobile mb-stack-lg">
+<div class="w-16 h-16 border-2 border-secondary-fixed mb-stack-sm">
+<img alt="Avatar de Grafite do Usuário" class="w-full h-full object-cover" data-alt="A stylized portrait of a young man with a sharp haircut, appearing as a high-quality graffiti-style digital illustration. The image uses vibrant lime greens and cool blacks. The background is a textured grey concrete wall. The mood is rebellious and stylish, fitting a premium street-culture membership profile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATMu2rnP1gC1mQkL-2M7jMTKC0z7bsFfOQXWJwSpONEpZoVlzs7NNLg4jKd4xw0khaAUs0avjiV2IVwNWRyZORcvm9AtE9WXx5SkMnM7hqAsUEYD3bCpYn4SW-4mvEAfHrvt6_Ogs3rFDB5GXHvSB6dD7JdaLtr3i2mne5f_sbACWD8xuQNsdD3UsfQikZk0Qvjblx_heR15uoYB9NSLwNI2KTkvhbx5oFBCoG1-vwiY1T7wsUTu-aSXUvBvUUp_FbWt5RjtKrvzA"/>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-secondary-fixed">REI_DA_RUA_99</h2>
+<p class="font-body-lg text-body-lg text-secondary-fixed-dim">Membro Platinum</p>
+<p class="font-label-md text-label-md text-on-surface-variant">12 Cortes Restantes</p>
+</div>
+<nav class="flex flex-col gap-stack-sm">
+<a class="text-secondary-fixed font-bold border-l-4 border-secondary-fixed pl-4 font-body-lg text-body-lg py-stack-sm" href="#">Perfil</a>
+<a class="text-on-surface-variant pl-4 font-body-lg text-body-lg py-stack-sm hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors" href="#">Histórico</a>
+<a class="text-on-surface-variant pl-4 font-body-lg text-body-lg py-stack-sm hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors" href="#">Cartões Presente</a>
+<a class="text-on-surface-variant pl-4 font-body-lg text-body-lg py-stack-sm hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors" href="#">Configurações</a>
+<a class="text-on-surface-variant pl-4 font-body-lg text-body-lg py-stack-sm hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors" href="#">Suporte</a>
+</nav>
+</div>
+</aside>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-2 bg-surface-container-lowest dark:bg-surface-container-lowest border-t-4 border-primary-container drop-shadow-[0px_-4px_0px_rgba(0,229,255,1)] z-50">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-highest transition-all active:scale-95" href="index.html">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-xl text-label-xl">INÍCIO</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-highest transition-all active:scale-95" href="agendar.html">
+<span class="material-symbols-outlined">content_cut</span>
+<span class="font-label-xl text-label-xl">MARCAR</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container p-2 scale-110 transition-all active:scale-95" href="equipe.html">
+<span class="material-symbols-outlined">group</span>
+<span class="font-label-xl text-label-xl">CREW</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-highest transition-all active:scale-95" href="loja.html">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-label-xl text-label-xl">LOJA</span>
+</a>
+</nav>
+<!-- Spacer for Bottom Nav -->
+<div class="h-20"></div>
+</body></html>

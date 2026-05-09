@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Space+Grotesk:wght@500;700&amp;family=Montserrat:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#79ff5b",
+                    "on-secondary-fixed-variant": "#095300",
+                    "background": "#131313",
+                    "on-error": "#690005",
+                    "on-surface-variant": "#bac9cc",
+                    "on-primary-fixed-variant": "#004f58",
+                    "on-tertiary": "#5e1700",
+                    "surface-tint": "#00daf3",
+                    "on-secondary-fixed": "#022100",
+                    "on-tertiary-fixed-variant": "#852400",
+                    "on-primary-container": "#00626e",
+                    "on-tertiary-fixed": "#3a0b00",
+                    "surface-dim": "#131313",
+                    "tertiary-fixed": "#ffdbd0",
+                    "primary-fixed-dim": "#00daf3",
+                    "inverse-on-surface": "#313030",
+                    "secondary-container": "#2ff801",
+                    "error": "#ffb4ab",
+                    "tertiary-container": "#ffc3b1",
+                    "surface-container": "#201f1f",
+                    "surface": "#131313",
+                    "secondary-fixed-dim": "#2ae500",
+                    "on-secondary-container": "#0f6d00",
+                    "outline": "#849396",
+                    "secondary": "#d7ffc5",
+                    "on-primary": "#00363d",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-bright": "#393939",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary": "#053900",
+                    "tertiary-fixed-dim": "#ffb59e",
+                    "inverse-primary": "#006875",
+                    "on-surface": "#e5e2e1",
+                    "inverse-surface": "#e5e2e1",
+                    "primary-fixed": "#9cf0ff",
+                    "primary": "#c3f5ff",
+                    "outline-variant": "#3b494c",
+                    "on-tertiary-container": "#a52f00",
+                    "on-primary-fixed": "#001f24",
+                    "primary-container": "#00e5ff",
+                    "on-background": "#e5e2e1",
+                    "tertiary": "#ffe8e2",
+                    "error-container": "#93000a",
+                    "surface-container-high": "#2a2a2a",
+                    "surface-container-highest": "#353534",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-variant": "#353534"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "48px",
+                    "stack-lg": "32px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "stack-md": "16px",
+                    "unit": "4px",
+                    "stack-sm": "8px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Anton"],
+                    "label-md": ["Space Grotesk"],
+                    "headline-md": ["Anton"],
+                    "body-lg": ["Montserrat"],
+                    "body-md": ["Montserrat"],
+                    "label-xl": ["Space Grotesk"],
+                    "headline-xl": ["Anton"],
+                    "headline-lg": ["Anton"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["36px", {"lineHeight": "1.1", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-xl": ["14px", {"lineHeight": "1", "fontWeight": "700"}],
+                    "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.1", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.grain-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDnG-qjdzKl0fJ8RSguZZS2_P7vgkCQVJ2I36H21gJyFfqzoKKws1s0bryWAW245rzBxk_y_xgL6MP9gI68KUE7xN9mxfxZPsg5tZUJwevEsySem1hNeC1drW_5AEI1xmiaIECJLN5c4Yxe4Il_w0IfPc6rTJJg0AkFZ8bIYm-OldZcAwtWIli61db6MJTL0uyAqFmrsJT8wIRnrMp7T1COMjxS3fdaz65qqaZCzKiFVvPLYUH8yqUrPpGpz-6buzypBBFSsRLbSAI);
+    opacity: 0.05
+    }
+.neon-glow-primary {
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.4)
+    }
+.sticker-rotate-left {
+    transform: rotate(-3deg)
+    }
+.sticker-rotate-right {
+    transform: rotate(2deg)
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<div class="fixed inset-0 pointer-events-none grain-overlay z-50"></div>
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-40 bg-background border-b-4 border-secondary-container drop-shadow-[4px_4px_0px_rgba(47,248,1,1)] flex justify-between items-center px-margin-mobile py-stack-md">
+<div class="flex items-center gap-stack-sm active:translate-y-1 transition-transform cursor-pointer" onclick="window.location.href='index.html'">
+<span class="material-symbols-outlined text-secondary-fixed text-headline-md">menu</span>
+<h1 class="font-headline-xl text-headline-xl text-secondary-fixed uppercase tracking-tighter">LOJA RAW</h1>
+</div>
+<div class="flex items-center gap-stack-md">
+<div class="hidden md:flex gap-stack-lg mr-stack-lg">
+<span class="font-label-xl text-label-xl text-on-surface-variant hover:skew-x-2 transition-transform cursor-pointer" onclick="window.location.href='index.html'">INÍCIO</span>
+<span class="font-label-xl text-label-xl text-on-surface-variant hover:skew-x-2 transition-transform cursor-pointer" onclick="window.location.href='agendar.html'">RESERVAR</span>
+<span class="font-label-xl text-label-xl text-on-surface-variant hover:skew-x-2 transition-transform cursor-pointer" onclick="window.location.href='equipe.html'">EQUIPE</span>
+<span class="font-label-xl text-label-xl text-secondary-fixed hover:skew-x-2 transition-transform cursor-pointer" onclick="window.location.href='loja.html'">LOJA</span>
+</div>
+<div class="w-12 h-12 rounded-full border-2 border-secondary-fixed overflow-hidden hover:skew-x-2 transition-transform active:translate-y-1">
+<img alt="Foto de perfil do barbeiro" class="w-full h-full object-cover" data-alt="A close-up portrait of a stylish modern barber with urban tattoos and a sharp fade haircut. The lighting is high-contrast, moody noir style with vibrant neon green rim lighting. The background features a gritty, textured concrete wall reflecting the street-art inspired aesthetic of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5YhzOpFCozYQltiR7iSflmMoEdY9jumUbacPujInrrDWhG5jw9QK0OuvxDggwYhePLXENe38XFcIXy3DsZpA5G5SUSlHvrL3dGw4dqZCs-14sVqiks65uz4ueEZRlsJ9xlE989mT6PeZfHTKtxaKVICM6f6_4lln-WSgYTi9qyi6rfIKwVPQdDI8tBDOy7jkA75phG8tlyohhFMONzE_NjJ2YJ9VjphgMaoRo5aQF2q2-yTTby0ILeZMqG0zhnRzuJ0A3hV5m5xM"/>
+</div>
+</div>
+</header>
+<main class="min-h-screen pb-32">
+<!-- Hero Section -->
+<section class="relative h-[353px] md:h-[530px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60" data-alt="Cinematic wide shot of professional grooming products sitting on a dark, wet asphalt surface at night. Bright neon electric blue and toxic green lights flicker in the background like city signage. The atmosphere is raw, gritty, and industrial, capturing the high-octane energy of urban street culture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZmMZR1YABxlKEjI-1QNo_BkZdaAIZX-p-qknUnwMS5vU3bXx4QXZ-c3s1NhLnQsi8iiRLxLj0dN6dCmVbUh_8CMXbNtJ7wr_vGa9g0IMVqIlJm0DvO-GvGrYF-fNskV7PDRwhTDAlv38KMz2NLCPP7X-O94K66y97XYKyss5DienywOpvm_n8P3gv28U66EaWrhAxH9N2zYRpMYkq0zY3si3NQ5fETpwbsFDyV7oUn37EY7yUrQD2rW6CtDBL2QX8IzHt77cJxiI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile">
+<h2 class="font-headline-xl text-[80px] md:text-[120px] text-primary-container uppercase leading-none drop-shadow-[8px_8px_0px_rgba(121,255,91,1)] tracking-tight">ARMADURA URBANA</h2>
+<p class="font-body-lg text-body-lg text-on-surface max-w-xl mx-auto mt-stack-md bg-background/80 p-stack-sm inline-block border-l-4 border-secondary-fixed">
+                    CUIDADOS DE ELITE PARA A SELVA DE PEDRA. PRECISÃO NASCIDA NA BARBEARIA, ENGARRAFADA PARA AS RUAS.
+                </p>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="px-margin-mobile md:px-margin-desktop py-stack-lg max-w-7xl mx-auto">
+<div class="flex items-center justify-between mb-stack-lg border-b-2 border-outline-variant pb-stack-sm">
+<h3 class="font-headline-lg text-headline-lg text-on-surface">A LINHA COMPLETA</h3>
+<div class="flex gap-stack-sm">
+<span class="bg-surface-container-highest p-2 border-2 border-secondary-fixed cursor-pointer material-symbols-outlined text-secondary-fixed">filter_list</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Product 1 -->
+<div class="group bg-surface-container border-2 border-primary-container p-stack-md flex flex-col drop-shadow-[6px_6px_0px_rgba(121,255,91,1)] hover:-translate-y-2 transition-transform duration-300">
+<div class="relative overflow-hidden mb-stack-md h-80 bg-background">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A premium matte clay hair pomade jar placed on a textured metallic grate. Intense blue neon lighting creates sharp reflections on the dark packaging. The mood is edgy and professional, highlighting the high-quality craftsmanship and street-art inspiration of the product line." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4SSHR5ohDTPOvWeWZZ2gm3lN7VfOlNPn4ulYsmvHW-4X3SXkKOoIKDfpMvLcktSlYqhNG5oy6a-q20KmR-7insd2d0g8gbWvgiFcqtI1nii9e9Nr5WK6WFiGeTyfXEtXMv0Z2027PFEQRo7YqjXyZfeFbRzEh6UyFqW25KI19DgZpdMIrufi7GkdCm5yLckCwXykpNTRGJQ0GlNUZ2-XvuMRgf93-jlH4jSKAn0s0skncwMosANkjaB_S-TSQJdJA8N7UTDydhuE"/>
+<!-- Sticker Price Tag -->
+<div class="absolute top-4 right-4 bg-tertiary-container text-on-tertiary-container px-4 py-1 font-headline-md sticker-rotate-right border-2 border-on-tertiary-container z-20">
+                            $24.00
+                        </div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-stack-sm">
+<h4 class="font-headline-md text-headline-md text-secondary-fixed leading-none">ARGILA CONCRETO</h4>
+<span class="font-label-md text-label-md bg-on-secondary-fixed-variant text-secondary-fixed px-2 py-1 uppercase">FIXAÇÃO EXTREMA</span>
+</div>
+<p class="text-on-surface-variant font-body-md mb-stack-md">Argila de nível industrial para um acabamento sem brilho e com alta textura. Criada para durar 24 horas no agito.</p>
+</div>
+<button class="w-full bg-primary-container text-on-primary font-headline-md py-stack-md flex items-center justify-center gap-stack-sm active:translate-y-1 hover:brightness-110 neon-glow-primary transition-all">
+                        ADICIONAR À MÁQUINA <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+</button>
+</div>
+<!-- Product 2 -->
+<div class="group bg-surface-container border-2 border-primary-container p-stack-md flex flex-col drop-shadow-[6px_6px_0px_rgba(255,219,208,1)] hover:-translate-y-2 transition-transform duration-300">
+<div class="relative overflow-hidden mb-stack-md h-80 bg-background">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A small amber glass bottle of beard oil positioned next to a piece of charred wood. The lighting is warm but aggressive, with orange neon streaks cutting through a dark, hazy background. The image evokes a rugged, urban survivalist vibe with deep shadows and sharp, saturated highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgLYM2lI8kFDkDJnTn7nHyP5BeS7YdKJ2_G_wdNVx9X-groJKa4zTT6RjY-Z52Myd1FoBFhgxkfT0XljEqyV5Lk5NMtF-HUDhiwbnbHGzRYZzeDTKOOYnwo39jjSWhrItGTs_DVS7i74BpT0EMmFvy9sndeFOSHhwqf5ev4x_6ZDo9L0HgteGeZ8idChywtVkcpBowyrkuhTl5sFblKLk_XkzDc6xM6FQ-Rxvp4mRQ1LBJspzJOt3RreT_ngnOzKQKsTCj8MOlEjs"/>
+<div class="absolute top-4 right-4 bg-secondary-container text-on-secondary-container px-4 py-1 font-headline-md sticker-rotate-left border-2 border-on-secondary-container z-20">
+                            $18.00
+                        </div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-stack-sm">
+<h4 class="font-headline-md text-headline-md text-primary-container leading-none">BRILHO GRAFFITI</h4>
+<span class="font-label-md text-label-md bg-on-primary-fixed-variant text-primary-fixed px-2 py-1 uppercase">ALTO BRILHO</span>
+</div>
+<p class="text-on-surface-variant font-body-md mb-stack-md">Pomada vibrante à base de água. Proporciona um visual impecável que reflete cada luz de neon da noite.</p>
+</div>
+<button class="w-full bg-primary-container text-on-primary font-headline-md py-stack-md flex items-center justify-center gap-stack-sm active:translate-y-1 hover:brightness-110 neon-glow-primary transition-all">
+                        ADICIONAR À MÁQUINA <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+</button>
+</div>
+<!-- Product 3 -->
+<div class="group bg-surface-container border-2 border-primary-container p-stack-md flex flex-col drop-shadow-[6px_6px_0px_rgba(0,229,255,1)] hover:-translate-y-2 transition-transform duration-300">
+<div class="relative overflow-hidden mb-stack-md h-80 bg-background">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A metal container of premium beard balm resting on a stack of worn spray paint cans. The scene is lit by electric green neon from above, casting dramatic shadows. The texture of the rusted metal cans contrasts with the clean, bold branding of the balm container." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYC4UIVSeItNuc3wa90BHjX0BcwI1ASDhgvc7tFELN3f-nKdaospLKGt4SnZ122qQ0lE2RXdZLiX06DRFA7MWBz6LwPskeW1p7EgteVX3yRbtI43cO_Xpt8lcCqe8YAxVlXIKMB04nNxXDQevDeJGfoElcuLiqVj-KJR-5UcN_rAkZqrUTRxMAB8QaiUw017DGh2pIiJlSST55KbQW5ocLUhFobAxKMf98Bz4SKXpsNSFFX0LDXFqdRl5syw3_R78O-X1JgsvofCs"/>
+<div class="absolute top-4 right-4 bg-tertiary-fixed-dim text-on-tertiary-fixed px-4 py-1 font-headline-md sticker-rotate-right border-2 border-on-tertiary-fixed z-20">
+                            $32.00
+                        </div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-stack-sm">
+<h4 class="font-headline-md text-headline-md text-secondary-fixed leading-none">ELIXIR URBANO</h4>
+<span class="font-label-md text-label-md bg-on-secondary-fixed-variant text-secondary-fixed px-2 py-1 uppercase">HIDRATAÇÃO</span>
+</div>
+<p class="text-on-surface-variant font-body-md mb-stack-md">O óleo de barba definitivo com notas de cedro e fumaça. Domina as barbas mais selvagens com um brilho pesado.</p>
+</div>
+<button class="w-full bg-primary-container text-on-primary font-headline-md py-stack-md flex items-center justify-center gap-stack-sm active:translate-y-1 hover:brightness-110 neon-glow-primary transition-all">
+                        ADICIONAR À MÁQUINA <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+</button>
+</div>
+<!-- Product 4 -->
+<div class="group bg-surface-container border-2 border-primary-container p-stack-md flex flex-col drop-shadow-[6px_6px_0px_rgba(121,255,91,1)] hover:-translate-y-2 transition-transform duration-300">
+<div class="relative overflow-hidden mb-stack-md h-80 bg-background">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A high-performance barber clipper set against a backdrop of graffiti-covered brick walls. The lighting is a cold, clinical blue mixed with flickering neon green highlights. The focus is on the sharp, metallic teeth of the clippers, emphasizing precision and professional-grade durability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj-C7OOyeF0YAtfQ9u_6mmZ2wv04hX90RULY2QlKSgB-Q-l6QoitKC8p4JuSrkq9x8TslNcqKvi3qRtFJ6tAksh4Feh6EhlCdsTnituRGm3RMKrmMal531srW-6k9j-EkkbMt6tK0-WvZ6xcil9TLLXqEILJwRSQTxLqEmi88GDEk7hrNFF2Y6TXIyOlPAtwmPu2_Y4IR5F3hLZfK1r4QJv4vVqYsXyFPf-kX0SL2uac2BgQ_BCmHmITnnlyoYrEoHuekvT2SlFm0"/>
+<div class="absolute top-4 right-4 bg-tertiary-container text-on-tertiary-container px-4 py-1 font-headline-md sticker-rotate-left border-2 border-on-tertiary-container z-20">
+                            $145.00
+                        </div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-stack-sm">
+<h4 class="font-headline-md text-headline-md text-primary-container leading-none">MÁQUINA PRO-EDGE</h4>
+<span class="font-label-md text-label-md bg-on-primary-fixed-variant text-primary-fixed px-2 py-1 uppercase">FERRAMENTA PRO</span>
+</div>
+<p class="text-on-surface-variant font-body-md mb-stack-md">Máquinas sem fio profissionais com lâminas de aço carbono. O mesmo equipamento usado por nossa equipe na linha de frente.</p>
+</div>
+<button class="w-full bg-primary-container text-on-primary font-headline-md py-stack-md flex items-center justify-center gap-stack-sm active:translate-y-1 hover:brightness-110 neon-glow-primary transition-all">
+                        ADICIONAR À MÁQUINA <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Subscription Section -->
+<section class="mt-stack-lg bg-surface-container-high border-y-4 border-secondary-container py-stack-lg px-margin-mobile overflow-hidden relative">
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<h3 class="font-headline-xl text-headline-xl text-secondary-fixed uppercase tracking-tighter mb-stack-sm">JUNTE-SE À EQUIPE</h3>
+<p class="font-body-lg text-body-lg text-on-surface mb-stack-lg">NUNCA FIQUE NA MÃO. RECEBA SEUS PRODUTOS FAVORITOS MENSALMENTE E ECONOMIZE 20%.</p>
+<div class="flex flex-col md:flex-row gap-gutter items-center">
+<input class="w-full bg-background border-b-2 border-primary-container text-primary-fixed font-headline-md p-stack-md focus:outline-none focus:neon-glow-primary transition-all uppercase placeholder:text-on-surface-variant" placeholder="SEU@EMAIL.COM" type="email"/>
+<button class="w-full md:w-auto bg-secondary-fixed text-on-secondary-fixed font-headline-md px-12 py-stack-md whitespace-nowrap hover:bg-primary-container hover:text-on-primary-container transition-colors drop-shadow-[4px_4px_0px_rgba(255,255,255,1)] active:translate-y-1">
+                        INSCREVA-ME
+                    </button>
+</div>
+</div>
+<!-- Decorative "Stencils" -->
+<div class="absolute -bottom-4 -left-8 font-headline-xl text-surface-container opacity-20 text-[160px] leading-none pointer-events-none select-none">ESTILO</div>
+<div class="absolute -top-4 -right-8 font-headline-xl text-surface-container opacity-20 text-[160px] leading-none pointer-events-none select-none">REGRAS</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-2 bg-surface-container-lowest border-t-4 border-primary-container drop-shadow-[0px_-4px_0px_rgba(0,229,255,1)] z-50">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-highest active:scale-95 transition-all" href="index.html">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-xl text-label-xl">INÍCIO</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-highest active:scale-95 transition-all" href="agendar.html">
+<span class="material-symbols-outlined">content_cut</span>
+<span class="font-label-xl text-label-xl">RESERVAR</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-highest active:scale-95 transition-all" href="equipe.html">
+<span class="material-symbols-outlined">group</span>
+<span class="font-label-xl text-label-xl">EQUIPE</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container p-2 scale-110 active:scale-95 transition-all" href="loja.html">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-label-xl text-label-xl">LOJA</span>
+</a>
+</nav>
+</body></html>
