@@ -134,6 +134,21 @@ button:hover{
     body {
       min-height: max(884px, 100dvh);
     }
+      section{
+  animation: fade 1s ease;
+}
+
+@keyframes fade{
+  from{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
   </style>
 </head>
 <body class="bg-background text-on-background font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
