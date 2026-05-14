@@ -200,7 +200,8 @@ data-barbeiro="Jax">
 </div>
 </div>
 <!-- Crew Card 2 -->
-<div class="flex items-center gap-stack-md p-stack-sm bg-surface-container-high border-2 border-secondary-fixed cursor-pointer transition-colors">
+<div class="group relative barbeiro-card"
+data-barbeiro="Vera">
 <div class="w-16 h-16 bg-surface-container-highest flex-shrink-0 border-2 border-secondary-fixed">
 <img alt="Retrato de Vera" class="w-full h-full object-cover grayscale" data-alt="A professional female barber with dyed hair and a bold streetwear style, standing in a studio with exposed brick and neon accents. She holds professional shears with expert poise. The scene is illuminated with electric blue and bright green neon, creating a high-energy, brutalist atmosphere typical of a modern urban barber brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOxw0CPQf96X-FgaPOWYWCa1rNgfQ66rP1w8dLSyRx63e5Mswrj8j25X8VWTYIwhzlhAqCABT_Oum4KQ-HQuG8HBvH0k30zlA8Xyq-43FYUc6Dze37v0P2CqjgULQj7GYfR9qn9GxNLk-wxCmtkCg4RP1L2m_BOTpdlFglFY4h6DW8XLPdNsFUQgxBT5ZLXYe3pyuSpXTUuLN0Mlw5Mjej8BNTC2y0jbSojNT84PBBpTKCvMaGRnfI4iQdHrIFVAMqRJdKcW5Yxuw"/>
 </div>
@@ -212,10 +213,9 @@ data-barbeiro="Jax">
 <span class="text-label-md text-on-surface-variant">5.0 (112 CORTES)</span>
 </div>
 </div>
-</div>
 <!-- Crew Card 3 -->
-<div class="flex items-center gap-stack-md p-stack-sm bg-surface-container-high border-2 border-transparent hover:border-secondary-fixed cursor-pointer transition-colors">
-<div class="w-16 h-16 bg-surface-container-highest flex-shrink-0 border-2 border-secondary-fixed">
+<div class="group relative barbeiro-card"
+data-barbeiro="Leo">
 <img alt="Retrato de Leo" class="w-full h-full object-cover grayscale" data-alt="A young, sharp-looking barber with a meticulously groomed beard and a cool, urban vibe. He is posed in a dark, textured studio space with subtle concrete textures and brilliant neon highlights in shades of orange and green. The mood is authentic, rebellious, and focused, capturing the spirit of modern street culture and grooming." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG2upPfGw8wzHEabsml2ruuV5C4uQNsBJkA38_4hirLl7QmY7EF5SUkHNNzf7TBe3itCrJzWotbrG8Dwg54qCX9M84D7HitkmVa_oKLoJXll3vNDDr87Vc4Gq8ECl-h4h6mWq0ILklzf4c_QLjxyAH023-fzuSrR0niCPOtY2OA8zMwyeU-CCHZbs-puILHMa7l4JtM0W-SgQu0KC7A49-5YfHCNZ7GB0PVkX9BY5U8Y3vtY6pYyHexi7uZdXm65bFMr8WMPEsMco"/>
 </div>
 <div>
@@ -249,20 +249,20 @@ data-barbeiro="Jax">
 </div>
 <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-stack-sm">
 <!-- Morning -->
-<button class="bg-surface-container border-2 border-outline-variant p-stack-sm font-label-xl text-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all">09:00</button>
-<button class="bg-surface-container border-2 border-outline-variant p-stack-sm font-label-xl text-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all">09:45</button>
-<button class="bg-surface-container border-2 border-secondary-fixed p-stack-sm font-label-xl text-center bg-secondary-container text-on-secondary-container drop-shadow-[4px_4px_0px_rgba(121,255,91,1)]">10:30</button>
+<button class="bg-surface-container border-2 border-outline-variant p-stack-sm font-label-xl text-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all">09:00</button class="09:00 horario-btn">
+<button class="bg-surface-container border-2 border-outline-variant p-stack-sm font-label-xl text-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all">09:45</button class="09:45 horario-btn">
+<button class="bg-surface-container border-2 border-secondary-fixed p-stack-sm font-label-xl text-center bg-secondary-container text-on-secondary-container drop-shadow-[4px_4px_0px_rgba(121,255,91,1)]">10:30</button class="10:30 horario-btn>
 <button class="bg-surface-container border-2 border-outline-variant p-stack-sm font-label-xl text-center opacity-40 cursor-not-allowed line-through">11:15</button>
 <!-- Afternoon -->
-<button class="bg-surface-container border-2 border-outline-variant p-stack-sm font-label-xl text-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all">13:00</button>
-<button class="bg-surface-container border-2 border-outline-variant p-stack-sm font-label-xl text-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all">13:45</button>
-<button class="bg-surface-container border-2 border-outline-variant p-stack-sm font-label-xl text-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all">14:30</button>
-<button class="bg-surface-container border-2 border-outline-variant p-stack-sm font-label-xl text-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all">15:15</button>
-<button class="bg-surface-container border-2 border-outline-variant p-stack-sm font-label-xl text-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all">16:00</button>
-<button class="bg-surface-container border-2 border-outline-variant p-stack-sm font-label-xl text-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all">16:45</button>
+<button class="bg-surface-container border-2 border-outline-variant p-stack-sm font-label-xl text-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all">13:00</button class="13:00 horario-btn">
+<button class="bg-surface-container border-2 border-outline-variant p-stack-sm font-label-xl text-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all">13:45</button class="13:45 horario-btn">
+<button class="bg-surface-container border-2 border-outline-variant p-stack-sm font-label-xl text-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all">14:30</button class="14:30 horario-btn">
+<button class="bg-surface-container border-2 border-outline-variant p-stack-sm font-label-xl text-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all">15:15</button class="15:15 horario-btn">
+<button class="bg-surface-container border-2 border-outline-variant p-stack-sm font-label-xl text-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all">16:00</button class="16:00 horario-btn">
+<button class="bg-surface-container border-2 border-outline-variant p-stack-sm font-label-xl text-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all">16:45</button class="16:45 horario-btn">
 <!-- Evening -->
-<button class="bg-surface-container border-2 border-outline-variant p-stack-sm font-label-xl text-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all">18:00</button>
-<button class="bg-surface-container border-2 border-outline-variant p-stack-sm font-label-xl text-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all">18:45</button>
+<button class="bg-surface-container border-2 border-outline-variant p-stack-sm font-label-xl text-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all">18:00</button class="18:00 horario-btn">
+<button class="bg-surface-container border-2 border-outline-variant p-stack-sm font-label-xl text-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all">18:45</button class="18:45 horario-btn">
 </div>
 </section>
 <!-- Final CTA Button -->
