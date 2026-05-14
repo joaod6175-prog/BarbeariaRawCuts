@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Admin</title>
+  <style>
+    body{
+      font-family: Arial;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      background:#f2f2f2;
+    }
+
+    .box{
+      background:white;
+      padding:30px;
+      border-radius:10px;
+      width:300px;
+      box-shadow:0 0 10px rgba(0,0,0,0.2);
+    }
+
+    input{
+      width:100%;
+      padding:10px;
+      margin-top:10px;
+    }
+
+    button{
+      width:100%;
+      padding:10px;
+      margin-top:15px;
+      cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Login Admin</h2>
+
+  <input type="text" id="user" placeholder="Usuário">
+  <input type="password" id="pass" placeholder="Senha">
+
+  <button onclick="login()">Entrar</button>
+
+  <p id="erro" style="color:red;"></p>
+</div>
+
+<script>
+function login(){
+  const usuario = document.getElementById("user").value;
+  const senha = document.getElementById("pass").value;
+
+  if(usuario === "admin" && senha === "1234"){
+    localStorage.setItem("adminLogado", "true");
+    window.location.href = "admin.html";
+  } else {
+    document.getElementById("erro").innerText = "Login inválido";
+  }
+}
+</script>
+
+</body>
+</html>
